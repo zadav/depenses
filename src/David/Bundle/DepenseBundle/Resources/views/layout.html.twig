@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/daviddepense/css/bootstrap.css') }}" media="screen"/>
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body style="background-color: purple;">
+        <div class="container"  style="background-color: white;">
+        <div class="hero-unit">
+            <h1 class="hero-unit">Mes d&eacute;penses</h1>
+            <p class="btn btn-primary btn-large">Visite guid&eacute;e</p>
+        </div>
+    
+            <div class="row-fluid">
+                <div class="span2">
+                {% block menu %}
+                    <ul>
+                        <li><a href="{{ path('daviddepense_creer_bilan')}}">Ajouter un bilan</a></li> 
+                        <li><a href="{{ path('daviddepense_creer')}}">Ajouter une dépense ou une rentrée</a></li> 
+                        <li>Statistiques</li>
+                    </ul>
+                {% endblock %}
+                 </div>
+                <div class="span10">
+                {% block body %}
+                {% endblock body%}
+                </div>
+            </div>
+        </div>
+        {% block javascripts %}
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+            <script type="text/javascript" src="{{ asset('bundles/daviddepense/js/bootstrap.js')}}"></script>
+        {% endblock %}
+    </body>
+</html>

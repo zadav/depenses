@@ -1,0 +1,23 @@
+{% extends "DavidDepenseBundle::layout.html.twig" %}
+
+{% block body %}
+    <h1>Bilan du mois : {{bilan.mois|date('m-Y')}}</h1>
+    
+    <table>
+    <caption></caption>
+    <tr>
+        <th>Date</th>
+        <th>Libellé</th>
+        <th>Catégorie</th>
+        <td>Type</td>
+    </tr>
+    {% for ligne in bilan.lignes %}
+        <tr>
+            <td>{{ ligne.jour }}</td>
+            <td>{{ ligne.libelle }}</td>
+            <td>{{ ligne.category.name }}</td>
+            <td></td>
+        </tr>
+    {% endfor %}
+     </table>
+{% endblock %}{# empty Twig template #}

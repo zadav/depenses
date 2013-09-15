@@ -1,0 +1,4 @@
+david_depense:
+    resource: "@DavidDepenseBundle/Resources/config/routing.yml"
+    prefix:   /
+

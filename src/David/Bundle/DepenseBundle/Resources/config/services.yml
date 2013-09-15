@@ -1,0 +1,7 @@
+parameters:
+#    david_depense.example.class: David\Bundle\DepenseBundle\Example
+
+services:
+#    david_depense.example:
+#        class: %david_depense.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

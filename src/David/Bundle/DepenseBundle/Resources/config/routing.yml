@@ -1,0 +1,17 @@
+daviddepense_accueil :
+    pattern:  /
+    defaults: { _controller: DavidDepenseBundle:Depense:index}
+
+daviddepense_creer :
+    pattern:  /creer
+    defaults: { _controller: DavidDepenseBundle:Depense:creer}
+
+daviddepense_creer_bilan :
+    pattern:  /bilan/add
+    defaults: { _controller: DavidDepenseBundle:Depense:creerBilan}
+
+daviddepense_show_bilan :
+    pattern:  /bilan/{id}
+    defaults: { _controller: DavidDepenseBundle:Depense:showBilan}
+    requirements: 
+      id : \d+

@@ -1,0 +1,17 @@
+{% extends "DavidDepenseBundle::layout.html.twig" %}
+
+
+{% block body %}
+<h2>Ajout d'un bilan</h2>
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <div>
+        {{ form_label(form.mois) }}
+        {{ form_errors(form.mois) }}
+       	{{ form_widget(form.mois) }}
+    </div>
+{{ form_end(form) }}
+
+	
+{% endblock %}
