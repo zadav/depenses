@@ -13,7 +13,7 @@
     </tr>
     {% for ligne in bilan.lignes %}
         <tr>
-            <td>{{ ligne.jour }}</td>
+            <td>{{ ligne.jour|date('d-m-Y') }}</td>
             <td>{{ ligne.libelle }}</td>
             <td>{{ ligne.category.name }}</td>
             <td></td>

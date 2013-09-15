@@ -15,3 +15,19 @@ daviddepense_show_bilan :
     defaults: { _controller: DavidDepenseBundle:Depense:showBilan}
     requirements: 
       id : \d+
+
+daviddepense_categories :
+    pattern:  /categories
+    defaults: { _controller: DavidDepenseBundle:Depense:showCategories}
+    
+daviddepense_category_add :
+    pattern:  /categories/add
+    defaults: { _controller: DavidDepenseBundle:Depense:addCategory}
+    
+daviddepense_category_edit :
+    pattern:  /categories/edit/{id}
+    defaults: { _controller: DavidDepenseBundle:Depense:editCategory}
+
+daviddepense_category_delete :
+    pattern:  /categories/edit/{id}
+    defaults: { _controller: DavidDepenseBundle:Depense:deleteCategory}

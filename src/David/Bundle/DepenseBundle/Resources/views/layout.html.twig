@@ -5,10 +5,11 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('bundles/daviddepense/css/bootstrap.css') }}" media="screen"/>
+        <link rel="stylesheet" href="{{ asset('bundles/daviddepense/css/david.css') }}" media="screen"/>
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
-    <body style="background-color: purple;">
+    <body>
         <div class="container"  style="background-color: white;">
         <div class="hero-unit">
             <h1 class="hero-unit">Mes d&eacute;penses</h1>
@@ -21,6 +22,7 @@
                     <ul>
                         <li><a href="{{ path('daviddepense_creer_bilan')}}">Ajouter un bilan</a></li> 
                         <li><a href="{{ path('daviddepense_creer')}}">Ajouter une dépense ou une rentrée</a></li> 
+                        <li><a href="{{ path('daviddepense_categories')}}">Catégories</a></li> 
                         <li>Statistiques</li>
                     </ul>
                 {% endblock %}

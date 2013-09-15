@@ -9,35 +9,25 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
  *
  * @author David
  */
-class LigneType extends AbstractType
+class CategoryType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-         $builder->add('jour','date')
-                 ->add('libelle')
-                 ->add('type')
-                 ->add('montant')
-                 ->add('bilan','entity', array(
-                    'class' => 'DavidDepenseBundle:Bilan',
-                    'property' => 'id',
-                ))
-                 ->add('category','entity', array(
-                     'class' => 'DavidDepenseBundle:Category',
-                     'property' => 'name'
-                 ))
+         $builder->add('name')
+                 ->add('description')
                  ->add('save','submit');
      
     }
     
     public function getName()
     {
-        return 'ligne';
+        return 'category';
     }
 
     public function setDefaultOptions(\Symfony\Component\OptionsResolver\OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'David\Bundle\DepenseBundle\Entity\Ligne',
+            'data_class' => 'David\Bundle\DepenseBundle\Entity\Category',
         ));
     }
     
